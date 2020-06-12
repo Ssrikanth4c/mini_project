@@ -1,0 +1,2 @@
+export const ADD_RESTAURANTS= "ADD_RESTAURANTS";
+export const ADD_TO_CART= "ADD_TO_CART"
