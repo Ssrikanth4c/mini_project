@@ -7,6 +7,8 @@ import Route from './Routes/Routes'
 import NavBar from './components/NavBar';
 
 export default function App(){
+  console.log(store.getState())
+  console.log('----')
   return(
     <BrowserRouter>
       <Provider store={store}>
