@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Display from './display'
+import  {addToCart} from '../redux/action'
 
-const Home=({restName,search,loading})=>{
+const Home=({restName,search,loading, addToCart})=>{
     console.log(restName)
     const handleSearch=(e)=>{
         console.log(e.target.value)
@@ -34,22 +35,30 @@ const handleSubmit=(e)=>{
                 </div>
             </form>
         </div>
-        {/* display search results */}
-        <div className='row border border-info m-2'>
-            {restName?.map(item=>(
-                
-                <div className='container'>
 
-                    <div key={item.id} className='fld-flex flex-wrap border border-info' >{item.restaurantName}</div>
-                
-                </div>     
-            
-            ))}           
+        {/* display search results */}
+        <div className='container '>
+            <div className='row border border-info'>
+
+                    {restName?.map(item=>(
+                <div className='col-lg-3 col-md-4 col-sm-6'>
+                    
+                    {/* Restaurant Food items arrenged in Grid Layout and also Responsive */}
+                        <div key={item.id} className='m-1 border border-info ' >
+                            <Display  data={item} addToCardHandler={addToCart} />
+                            
+                        </div>
+                    
+                    
+                </div>
+                    ))}           
+            </div>     
             </div>
         
     </React.Fragment>
     )
 };
+
 
 const mapStateToProps=state=>({
     restName: state.restData,
@@ -57,6 +66,10 @@ const mapStateToProps=state=>({
     loading:state.loading,
     filterData: state.filterData
 })
-
-
-export default connect(mapStateToProps)(Home)
+// mapDispatchToProps allows you to specify which action your component need to dispatch.
+const mapDispatchToProps=dispatch=>({
+    // explicitly forwarding arguments
+    addToCart: id=>dispatch(addToCart(id))
+})
+//passiing mapStateToProps,mapDispatchToProps to connect
+export default connect(mapStateToProps,mapDispatchToProps)(Home)
