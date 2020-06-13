@@ -21,12 +21,16 @@
                 "price":"140",
                 "img": "https://via.placeholder.com/150"
             },
-            { "id":"4",       
+            { 
+                "restaurantName":"restaurant_1",
+                "id":"4",       
                 "FoodItem": "Dal fry",
                 "price":"165",
                 "img": "https://via.placeholder.com/150"
             },
-            { "id":"5",       
+            { 
+                "restaurantName":"restaurant_1",
+                "id":"5",       
                 "FoodItem": "Mashroom Masala",
                 "price":"240",
                 "img": "https://via.placeholder.com/150"
@@ -39,7 +43,9 @@
                 "img": "https://via.placeholder.com/150"
             },
             
-            { "id":"7",       
+            { 
+                "restaurantName":"restaurant_1",
+                "id":"7",       
                 "FoodItem": "Mashroom Masala",
                 "price":"240",
                 "img": "https://via.placeholder.com/150"
@@ -67,7 +73,8 @@
             "price":"140",
             "img": "https://via.placeholder.com/150"
         },
-        { 
+        {  
+            "restaurantName":"restaurant_2",
             "id":"4",       
             "FoodItem": "Mashroom Masala",
             "price":"240",
