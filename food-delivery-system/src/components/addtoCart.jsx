@@ -1,8 +1,25 @@
 import React from 'react'
-const AddtoCart=()=>{
+import {connect} from 'react-redux'
+const AddtoCart=(cart)=>{
+    console.log(cart.cart)
+    let addToCartArr= cart.cart
     return (
 
-        <div>Add to Cart</div>
+        <div>
+            <h3 className="text-primary">
+            Add to Cart
+            </h3>
+            <div>
+                {}
+            </div>
+
+        </div>
     )
 }
-export default  AddtoCart
+
+const mapStateToProps=state=>({
+    cart: state.cartItems
+})
+// connect() ->connects React component to redux store
+// you don't wan't dispathch action then pass null or by default component will receive dispatch
+export default  connect(mapStateToProps)(AddtoCart)
