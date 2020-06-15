@@ -19,21 +19,23 @@ const handleSubmit=(e)=>{
     return(
         // search bar 
         <React.Fragment>
+        <div className='container'>
 
-        <div className="container m-2">
-            <form>
-                <div className="form-group row">
-                    <div className="col-11">
-                        <input type="search" className="form-control  border-primary" id='search'  onChange={handleSearch} />
-                    </div>  
-                    <div className="col-1">
-                        <input type="button" className=" btn btn-primary" value="Search" id="searchBtn" onClick={handleSubmit}  />
+            <div className="container m-2">
+                <form>
+                    <div className="form-group row">
+                        <div className="col-11">
+                            <input type="search" className="form-control  border-primary" id='search'  onChange={handleSearch} />
+                        </div>  
+                        <div className="col-1">
+                            <input type="button" className=" btn btn-primary" value="Search" id="searchBtn" onClick={handleSubmit}  />
+                        </div>
+                        <div className="col-12">
+                            <small id="emailHelp" className="form-text text-muted">Search Restaurant's to order food  online.</small>
+                        </div>
                     </div>
-                    <div className="col-12">
-                        <small id="emailHelp" className="form-text text-muted">Search Restaurant's to order food  online.</small>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
 
         {/* display search results */}
@@ -44,12 +46,10 @@ const handleSubmit=(e)=>{
                 <div className='col-lg-3 col-md-4 col-sm-6'>
                     
                     {/* Restaurant Food items arrenged in Grid Layout and also Responsive */}
-                        <div key={item.id} className='m-1 border border-info ' >
+                        <div key={item.id} className='m-1 ' >
                             <Display  data={item} addToCardHandler={addToCart} />
                             
                         </div>
-                    
-                    
                 </div>
                     ))}           
             </div>     
