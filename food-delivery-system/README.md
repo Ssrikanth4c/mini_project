@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Show Daily report of each restaurant Sales
+[ ] Graphically represnts the daily sales of each Restaurant. \
+\
+[ ] using `chart.js`; it makes graphical representation of thangs in React
+
 ## Available Scripts
 
 In the project directory, you can run:
